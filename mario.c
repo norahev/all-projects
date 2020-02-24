@@ -21,7 +21,7 @@ int main(void)
                 printf("#");
             }
         }
-        for(int g = 0; g < 2; g++)
+        for(int g = 0; g < 1; g++)
         {
             printf("  ");
         }
