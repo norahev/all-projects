@@ -7,7 +7,7 @@ int main(void)
     float change;
     do
     change = get_float ("How much change is owed?\n$");
-    while (change < 0.09);
+    while (change < 0.009);
     int n = round(change * 100);
     int a = 25;
     int b = 10;
