@@ -11,7 +11,7 @@ int main(void)
     while(h < 1 || h > 8); //repeat until number fits parameters
     for(int l = 0; l < h; l++)
     {
-        for(int d = l; d < h; d++)
+        for(int d = l; d < h - 1; d++)
         {
             printf(" ");
         }
