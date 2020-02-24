@@ -4,6 +4,6 @@
 int main(void)
 //prompt user for name
 {
-   string name = get_string("What is your name?\n");
+    string name = get_string("What is your name?\n");
     printf("hello, %s\n", name);
 }
