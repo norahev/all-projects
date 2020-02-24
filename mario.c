@@ -11,7 +11,7 @@ int main(void)
     while (n < 1 || n > 8);
     for (int i = 0; i < n; i++)
     {
-        for (int k = 7; k > i; k--)
+        for (int k = i; k < n - 1; k++)
         printf(" ");
         {
             for (int j = 0; j <= i; j++)
