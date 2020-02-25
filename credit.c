@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main(void)
+int main(void) //start
 {
     long n;
     do
@@ -58,7 +58,7 @@ int main(void)
         {
             printf("VISA\n");
         }
-        else if (sum % 10 == 0 && n / 100000000000000 == 51 )
+        else if (sum % 10 == 0 && n / 100000000000000 == 51)
         {
             printf("MASTERCARD\n");
         }
@@ -86,7 +86,7 @@ int main(void)
         {
             printf("AMEX\n");
         }
-        else
+        else //prints invalid for wrong numbers
         {
             printf("INVALID\n");
         }
