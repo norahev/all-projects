@@ -54,21 +54,41 @@ int main(void)
         {
             printf("Visa\n"); 
         }
-        if (sum % 10 == 0 && n / 1000000000000000 == 4)
+        else if (sum % 10 == 0 && n / 1000000000000000 == 4)
         {
-            printf("Visa\n");
+            printf("VISA\n");
         }
-        if (sum % 10 == 0 && n / 1000000000000000 == 5)
+        else if (sum % 10 == 0 && n / 100000000000000 == 51 )
         {
-            printf("MasterCard\n");
+            printf("MASTERCARD\n");
         }
-        if (sum % 10 == 0 && n / 100000000000000 == 3)
+        else if (sum % 10 == 0 && n / 100000000000000 == 52)
         {
-            printf("AmEx\n");
+            printf("MASTERCARD\n");
         }
-        if (sum % 10 != 0)
+        else if (sum % 10 == 0 && n / 100000000000000 == 53)
         {
-            printf("invalid\n");
+            printf("MASTERCARD\n");
+        }
+        else if (sum % 10 == 0 && n / 100000000000000 == 54)
+        {
+            printf("MASTERCARD\n");
+        }
+        else if (sum % 10 == 0 && n / 100000000000000 == 55)
+        {
+            printf("MASTERCARD\n");
+        }
+        else if (sum % 10 == 0 && n / 10000000000000 == 34)
+        {
+            printf("AMEX\n");
+        }
+        else if (sum % 10 == 0 && n / 10000000000000 == 37)
+        {
+            printf("AMEX\n");
+        }
+        else
+        {
+            printf("INVALID\n");
         }
     }
 }//end
