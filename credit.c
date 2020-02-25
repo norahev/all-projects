@@ -8,7 +8,7 @@ int main(void)
     {
         n = get_long("Insert credit card number: "); //prompt user for number
     }
-    while (n / 10000000000000 < 1 || n / 10000000000000000 > 9); //reprompt until number fits
+    while (n / 10000000000000000 > 9); //reprompt until number fits
     //tears given number to digits
     int a = n / 10 % 10;
     int a1 = (a * 2) % 10;
