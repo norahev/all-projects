@@ -21,7 +21,7 @@ int main(void)
             letter++;
         }
         {
-            if(text[i] == ' ' && isalnum(text[i + 1])) //count words
+            if(text[i] == ' ') //count words
             word++;
         }
         {
@@ -36,7 +36,7 @@ int main(void)
     //output of grades
     if(index < 1)
     {
-        printf("Before grade 1");
+        printf("Before Grade 1");
     }
     else if(index >= 16)
     {
@@ -47,5 +47,8 @@ int main(void)
         printf("Grade %.0f", index);
     }
     printf("\n");
+    //printf("%f\n", letter);
+    //printf("%f\n", word);
+    //printf("%f\n", sentence);
 } //end
 
