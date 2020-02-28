@@ -10,7 +10,6 @@ float sentence;
 int main(void)
 {
     string text = get_string("Text: "); //prompt user for input
-    printf("Text:%s\n", text);
     int lenght = strlen(text); //lenght of text
     if isalnum(text[0]) //if first character of text is number/letter set wordcount to 1
     word = 1;
