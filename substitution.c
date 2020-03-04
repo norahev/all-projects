@@ -71,6 +71,7 @@ int main(int argc, string argv[]) //command line argument
 
     }
     printf("%s", p);
+    printf("\n");
 
     return 0; //end
 }
