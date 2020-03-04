@@ -39,7 +39,7 @@ int main(int argc, string argv[]) //command line argument
     printf("ciphertext: "); //first output
     for (int i = 0; i < strlen(p); i++) //counts letters in plaintext
     {
-        int z = 0; //counter for the key
+        int z = -1; //counter for the key
         int a = 65; //counter for uppercase
         if (isupper(p[i]))
         {
@@ -49,7 +49,7 @@ int main(int argc, string argv[]) //command line argument
                 a++;
                 key[z] = toupper(key[z]);
             }
-            while (a < p[i] && a < 91);
+            while (a <= p[i] && a < 91);
         }
         int b = 97; //counter for lowercase
         if (islower(p[i]))
@@ -60,7 +60,7 @@ int main(int argc, string argv[]) //command line argument
                 b++;
                 key[z] = tolower(key[z]);
             }
-            while (b < p[i] && b < 123);
+            while (b <= p[i] && b < 123);
         }
         if (isalpha(p[i]) == false) //not alphabetical chars should stay the same
         {
