@@ -67,10 +67,8 @@ int main(int argc, string argv[]) //command line argument
             key[z] = p[i];
         }
         p[i] = key[z];
-        //printf("%s", p); //chiphertext
-
     }
-    printf("%s", p);
+    printf("%s", p); //chipertext
     printf("\n");
 
     return 0; //end
