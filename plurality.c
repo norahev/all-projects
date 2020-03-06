@@ -76,7 +76,7 @@ bool vote(string name)
     }
     for (int i = 0; i < MAX; i++)
     {
-        if (strcmp(name), candidates[i].name == false)
+        if (strcmp(name, candidates[i].name) == false)
         {
             candidates[i].votes = candidates[i].votes;
             return false;
