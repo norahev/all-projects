@@ -73,6 +73,9 @@ bool vote(string name)
             candidates[i].votes++;
             return true;
         }
+    }
+    for (int i = 0; i < MAX; i++)
+    {
         if (name != candidates[i].name)
         {
             candidates[i].votes = candidates[i].votes;
