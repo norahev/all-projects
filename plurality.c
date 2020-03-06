@@ -56,7 +56,6 @@ int main(int argc, string argv[])
         if (!vote(name))
         {
             printf("Invalid vote.\n");
-            return false;
         }
     }
 
@@ -77,7 +76,7 @@ bool vote(string name)
     }
     for (int i = 0; i < MAX; i++)
     {
-        if (name != candidates[i].name)
+        if (strcmp(name), candidates[i].name == false)
         {
             candidates[i].votes = candidates[i].votes;
             return false;
