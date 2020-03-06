@@ -76,6 +76,7 @@ bool vote(string name)
         else
         {
              candidates[i].votes = candidates[i].votes;
+             return false;
         }
     }
     //candidates[i].votes = candidates[i.votes];
