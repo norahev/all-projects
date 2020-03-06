@@ -73,11 +73,7 @@ bool vote(string name)
             candidates[i].votes++;
             return true;
         }
-        if (candidates[i].name != name)
-        {
-             candidates[i].votes = candidates[i].votes;
-             return false;
-        }
+       
     }
     //candidates[i].votes = candidates[i.votes];
     return false;
