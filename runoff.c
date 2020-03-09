@@ -180,6 +180,7 @@ int find_min(void)
             if (min > candidates[i].votes && candidates[i].eliminated == false)
             {
                 min = candidates[i].votes;
+                break;
             }
         }
     }
