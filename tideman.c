@@ -164,6 +164,13 @@ void sort_pairs(void)
                preferences[pairs[j].winner][pairs[j].loser] = preferences[pairs[i].winner][pairs[i].loser];
                swap = true;
             }
+            if (preferences[pairs[j].winner][pairs[j].loser] < preferences[pairs[i].winner][pairs[i].loser])
+            {
+               t = preferences[pairs[j].winner][pairs[j].loser];
+               preferences[pairs[j].winner][pairs[j].loser] = preferences[pairs[i].winner][pairs[i].loser];
+               preferences[pairs[i].winner][pairs[i].loser] = preferences[pairs[j].winner][pairs[j].loser];
+               swap = true;
+            }
         }
         if (!swap)
         {
