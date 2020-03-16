@@ -83,5 +83,89 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    RGBTRIPLE copy[height][width];
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            copy[i][j] = image[i][j];
+        }
+    }
+    for (int i = 0, red, green, blue, counter; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            red = 0;
+            green = 0; 
+            blue = 0;
+            counter = 0;
+            if (i >= 0 && j >= 0)
+            {
+                red += copy[i][j - 1].rgbtRed;
+                green += copy[i][j - 1].rgbtGreen;
+                blue += copy[i][j - 1].rgbtBlue;
+                counter ++;
+            }
+            if (i >= 0 && j - 1 >= 0)
+            {
+                red += copy[i][j-1].rgbtRed;
+                green += copy[i][j-1].rgbtGreen;
+                blue += copy[i][j-1].rgbtBlue;
+                counter++;
+            }
+            if ((i >= 0 && j + 1 >= 0) && (i >= 0 && j + 1 < width))
+            {
+                red += copy[i][j+1].rgbtRed;
+                green += copy[i][j+1].rgbtGreen;
+                blue += copy[i][j+1].rgbtBlue;
+                counter++;
+            }
+            if (i - 1 >= 0 && j >= 0)
+            {
+                red += copy[i-1][j].rgbtRed;
+                green += copy[i-1][j].rgbtGreen;
+                blue += copy[i-1][j].rgbtBlue;
+                counter++;
+            }
+            if (i - 1 >= 0 && j - 1 >= 0)
+            {
+                red += copy[i-1][j-1].rgbtRed;
+                green += copy[i-1][j-1].rgbtGreen;
+                blue += copy[i-1][j-1].rgbtBlue;
+                counter++;
+            }
+            if ((i - 1 >= 0 && j + 1 >= 0) && (i - 1 >= 0 && j + 1 < width))
+            {
+                red += copy[i-1][j+1].rgbtRed;
+                green += copy[i-1][j+1].rgbtGreen;
+                blue += copy[i-1][j+1].rgbtBlue;
+                counter++;
+            }
+            if ((i + 1 >= 0 && j >= 0) && (i + 1 < height && j >= 0))
+            {
+                red += copy[i+1][j].rgbtRed;
+                green += copy[i+1][j].rgbtGreen;
+                blue += copy[i+1][j].rgbtBlue;
+                counter++;
+            }
+            if ((i + 1 >= 0 && j - 1 >= 0) && (i + 1 < height && j - 1 >= 0))
+            {
+                red += copy[i+1][j-1].rgbtRed;
+                green += copy[i+1][j-1].rgbtGreen;
+                blue += copy[i+1][j-1].rgbtBlue;
+                counter++;
+            }
+            if ((i + 1 >= 0 && j + 1 >= 0) && (i + 1 < height && j + 1 < width))
+            {
+                red += copy[i+1][j+1].rgbtRed;
+                green += copy[i+1][j+1].rgbtGreen;
+                blue += copy[i+1][j+1].rgbtBlue;
+                counter++;
+            }
+            image[i][j].rgbtRed = round(red / (counter * 1.0));
+            image[i][j].rgbtGreen = round(green / (counter * 1.0));
+            image[i][j].rgbtBlue = round(blue / (counter * 1.0));
+        }
+    }
     return;
 }
