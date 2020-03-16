@@ -79,12 +79,45 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     }
 }
 
+int equationforblur(int i, int j, int height, int width, RGBTRIPLE image[height][width], int RGB)
+{
+    float counter = 0;
+    int sum = 0;
+    for (int k = i - 1; k < (i + 2); k++)
+    {
+        for (int l = j - 1; l < (j + 2); l++)
+        {
+            if (k < 0 || l < 0 || k >= height || l >= width)
+            {
+
+            }
+            else
+            {
+                if (RGB == 0)
+                {
+                    sum += image[k][l].rgbtRed;
+                }
+                else if (RGB == 1)
+                {
+                    sum += image[k][l].rgbtBlue;
+                }
+                else
+                {
+                    sum += image[k][l].rgbtGreen;
+                }
+                counter++;
+            }
+        }
+    }
+    return round(sum / counter);
+}
 
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+   {
     RGBTRIPLE copy[height][width];
-    for (int i = 0; i < height; i++)
+    for (int i = 0; i < height; i ++)
     {
         for (int j = 0; j < width; j++)
         {
@@ -95,77 +128,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            int red = 0;
-            int green = 0; 
-            int blue = 0;
-            int counter = 0;
-            if (i >= 0 && j >= 0)
-            {
-                red += copy[i][j - 1].rgbtRed;
-                green += copy[i][j - 1].rgbtGreen;
-                blue += copy[i][j - 1].rgbtBlue;
-                counter ++;
-            }
-            if (i >= 0 && j - 1 >= 0)
-            {
-                red += copy[i][j-1].rgbtRed;
-                green += copy[i][j-1].rgbtGreen;
-                blue += copy[i][j-1].rgbtBlue;
-                counter++;
-            }
-            if ((i >= 0 && j + 1 >= 0) && (i >= 0 && j + 1 < width))
-            {
-                red += copy[i][j+1].rgbtRed;
-                green += copy[i][j+1].rgbtGreen;
-                blue += copy[i][j+1].rgbtBlue;
-                counter++;
-            }
-            if (i - 1 >= 0 && j >= 0)
-            {
-                red += copy[i-1][j].rgbtRed;
-                green += copy[i-1][j].rgbtGreen;
-                blue += copy[i-1][j].rgbtBlue;
-                counter++;
-            }
-            if (i - 1 >= 0 && j - 1 >= 0)
-            {
-                red += copy[i-1][j-1].rgbtRed;
-                green += copy[i-1][j-1].rgbtGreen;
-                blue += copy[i-1][j-1].rgbtBlue;
-                counter++;
-            }
-            if ((i - 1 >= 0 && j + 1 >= 0) && (i - 1 >= 0 && j + 1 < width))
-            {
-                red += copy[i-1][j+1].rgbtRed;
-                green += copy[i-1][j+1].rgbtGreen;
-                blue += copy[i-1][j+1].rgbtBlue;
-                counter++;
-            }
-            if ((i + 1 >= 0 && j >= 0) && (i + 1 < height && j >= 0))
-            {
-                red += copy[i+1][j].rgbtRed;
-                green += copy[i+1][j].rgbtGreen;
-                blue += copy[i+1][j].rgbtBlue;
-                counter++;
-            }
-            if ((i + 1 >= 0 && j - 1 >= 0) && (i + 1 < height && j - 1 >= 0))
-            {
-                red += copy[i+1][j-1].rgbtRed;
-                green += copy[i+1][j-1].rgbtGreen;
-                blue += copy[i+1][j-1].rgbtBlue;
-                counter++;
-            }
-            if ((i + 1 >= 0 && j + 1 >= 0) && (i + 1 < height && j + 1 < width))
-            {
-                red += copy[i+1][j+1].rgbtRed;
-                green += copy[i+1][j+1].rgbtGreen;
-                blue += copy[i+1][j+1].rgbtBlue;
-                counter++;
-            }
-            image[i][j].rgbtRed = round(red / (counter));
-            image[i][j].rgbtGreen = round(green / (counter));
-            image[i][j].rgbtBlue = round(blue / (counter ));
+            image[i][j].rgbtRed = equationforblur(i, j, height, width, copy, 0);
+            image[i][j].rgbtBlue = equationforblur(i, j, height, width, copy, 1);
+            image[i][j].rgbtGreen = equationforblur(i, j, height, width, copy, 2);
         }
     }
     return;
+   }
 }
