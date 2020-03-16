@@ -79,7 +79,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     }
 }
 
-int equationforblur(int i, int j, int height, int width, RGBTRIPLE image[height][width], int RGB)
+int helpblur(int i, int j, int height, int width, RGBTRIPLE image[height][width], int RGB)
 {
     float counter = 0;
     int sum = 0;
@@ -128,9 +128,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            image[i][j].rgbtRed = equationforblur(i, j, height, width, copy, 0);
-            image[i][j].rgbtBlue = equationforblur(i, j, height, width, copy, 1);
-            image[i][j].rgbtGreen = equationforblur(i, j, height, width, copy, 2);
+            image[i][j].rgbtRed = helpblur(i, j, height, width, copy, 0);
+            image[i][j].rgbtBlue = helpblur(i, j, height, width, copy, 1);
+            image[i][j].rgbtGreen = helpblur(i, j, height, width, copy, 2);
         }
     }
     return;
