@@ -9,8 +9,8 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            avr = (image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed) / 3.0;
-            image[i][j].rgbtBlue = round(avr);
+            avr = (image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed) / 3.0; //calculates avarage of colors
+            image[i][j].rgbtBlue = round(avr); 
             image[i][j].rgbtGreen = round(avr);
             image[i][j].rgbtRed = round(avr);
         }
@@ -28,10 +28,11 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            sepiaR = .393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue;
-            sepiaG = .349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue;
-            sepiaB = .272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue;
-            if (sepiaR <=255.0 && sepiaR >= 0.0)
+            sepiaR = .393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue; //sepia for reds
+            sepiaG = .349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue; //sepia for greens
+            sepiaB = .272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue; //sepia for blues
+            //if sepiacolors are between 0 and 255, original color gets sepiacoolor
+            if (sepiaR <= 255.0 && sepiaR >= 0.0) 
             {
                 image[i][j].rgbtRed = round(sepiaR);
             }
@@ -39,10 +40,11 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             {
                 image[i][j].rgbtGreen = round(sepiaG);
             }
-            if (sepiaB <=255.0 && sepiaB > 0.0)
+            if (sepiaB <= 255.0 && sepiaB > 0.0)
             {
                 image[i][j].rgbtBlue = round(sepiaB);
             }
+            //if sepiacolor is larger then 255, original color gets 255
             if (sepiaR > 255.0)
             {
                 image[i][j].rgbtRed = 255;
@@ -63,26 +65,26 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    for (int i = 0; i < height; i++)
+    for (int i = 0; i < height; i++) //counts columns
     {
-        int half = round((float)1/2 * width);
-        for (int j = 0; j < width; j++)
+        int half = round((float)1 / 2 * width); //halfrow
+        for (int j = 0; j < width; j++) //counts rows
         {
-            while (j < half)
+            while (j < half) //counts only halfrows
             {
-                RGBTRIPLE t = image[i][j];
-                image[i][j] = image[i][width - j - 1];
-                image[i][width - j -1] = t;
+                RGBTRIPLE t = image[i][j]; //temporary holder
+                image[i][j] = image[i][width - j - 1]; //swap
+                image[i][width - j - 1] = t; //swap
                 break;
             }
         }
     }
 }
-
+//helper function for blur
 int helpblur(int i, int j, int height, int width, RGBTRIPLE image[height][width], int RGB)
 {
-    float counter = 0;
-    int sum = 0;
+    float counter = 0; //counter
+    int sum = 0; //sum of color
     for (int k = i - 1; k < (i + 2); k++)
     {
         for (int l = j - 1; l < (j + 2); l++)
@@ -109,19 +111,18 @@ int helpblur(int i, int j, int height, int width, RGBTRIPLE image[height][width]
             }
         }
     }
-    return round(sum / counter);
+    return round(sum / counter); //returns the avarage of colors
 }
 
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-   {
     RGBTRIPLE copy[height][width];
     for (int i = 0; i < height; i ++)
     {
         for (int j = 0; j < width; j++)
         {
-            copy[i][j] = image[i][j];
+            copy[i][j] = image[i][j]; //copy of original image
         }
     }
     for (int i = 0; i < height; i++)
@@ -134,5 +135,4 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
     return;
-   }
 }
