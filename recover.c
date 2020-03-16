@@ -156,7 +156,7 @@ int main(int argc, char *argv[])
 
         fclose(outptr);
 
-        free(buffer);
+        //free(buffer);
 
         return 0;
 
