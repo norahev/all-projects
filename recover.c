@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     int openfile = 0;
     int jpeg = 0;
     char filename[10];
-    FILE *img_file;
+    FILE *img_file = NULL;
     while (fread(&buffer, 512, 1, inptr))
     {
         if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
                 jpeg++;
             }
             fwrite(&buffer, 512, 1, img_file);
+            return 0;
         }
         else
         {
@@ -52,6 +53,7 @@ int main(int argc, char *argv[])
             {
 
             }
+            return 0;
         }
 
     }
