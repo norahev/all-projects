@@ -49,7 +49,7 @@ bool check(const char *word)
             p = p->next;
         }
     }
- return false; //else the word is misspelled
+    return false; //else the word is misspelled
 }
 
 // Hashes word to a number
@@ -61,8 +61,8 @@ unsigned int hash(const char *word)
     int c;
     while ((c = *word++))
     {
-       hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
-       return hash;
+        hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+        return hash;
     }
     return 0;
 }
@@ -76,7 +76,7 @@ bool load(const char *dictionary)
         return false; //if nothing found return false
     }
     char out[LENGTH]; //word in dictionary
-    while (fscanf(dict,"%s", out) != EOF)
+    while (fscanf(dict, "%s", out) != EOF)
     {
         int index = hash(out) % N;
         node *tmp = malloc(sizeof(node)); //allocates memory fot temporary node
@@ -84,9 +84,9 @@ bool load(const char *dictionary)
         {
             return false; //if couldn't fint memory
         }
-        strcpy (tmp->word, out); //copy dictionary words to hashtable
+        strcpy(tmp->word, out);  //copy dictionary words to hashtable
         tmp->next = table[index];
-        table[index] = tmp; 
+        table[index] = tmp;
         counter++;
     }
     fclose(dict);
