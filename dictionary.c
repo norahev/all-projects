@@ -29,33 +29,34 @@ int counter = 0;
 bool check(const char *word)
 {
     int l = strlen(word);
-    char copy[l + 1];
+    char copy[l + 1]; //make a copy of every word in the text
     copy[l] = '\0';
     for (int i = 0; i < l; i++)
     {
-        copy[i] =  tolower(word[i]);
+        copy[i] =  tolower(word[i]); //change the copies to lowercase, this way they will be like in the dictionary
     }
     int index = hash(copy) % N;
-    node *a = table[index];
+    node *a = table[index]; //head of the node
     if (a != NULL)
     {
-        node *p = a;
+        node *p = a; //p is the cursor
         while (p != NULL)
         {
-            if (strcmp(copy, p->word) == 0)
+            if (strcmp(copy, p->word) == 0) //compares the text word by word to the dictionary
             {
-                return true;
+                return true; //returns true if they match
             }
             p = p->next;
         }
     }
- return false;
+ return false; //else the word is misspelled
 }
 
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
     //http://www.cse.yorku.ca/~oz/hash.html
+    //hash function that I found on the internet
     unsigned int hash = 5381;
     int c;
     while ((c = *word++))
@@ -69,24 +70,23 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful else false
 bool load(const char *dictionary)
 {
-    FILE *dict = fopen(dictionary, "r");
+    FILE *dict = fopen(dictionary, "r"); //open file dictionary and read
     if (dict == NULL)
     {
-        return false;
+        return false; //if nothing found return false
     }
-    char out[LENGTH];
-    //int n = LENGTH + 2;
+    char out[LENGTH]; //word in dictionary
     while (fscanf(dict,"%s", out) != EOF)
     {
         int index = hash(out) % N;
-        node *tmp = malloc(sizeof(node));
+        node *tmp = malloc(sizeof(node)); //allocates memory fot temporary node
         if (tmp == NULL)
         {
-            return false;
+            return false; //if couldn't fint memory
         }
-        strcpy (tmp->word, out);
+        strcpy (tmp->word, out); //copy dictionary words to hashtable
         tmp->next = table[index];
-        table[index] = tmp;
+        table[index] = tmp; hash index
         counter++;
     }
     fclose(dict);
@@ -96,7 +96,7 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded else 0 if not yet loaded
 unsigned int size(void)
 {
-    return counter;
+    return counter; //returns counter of words
 }
 
 // Unloads dictionary from memory, returning true if successful else false
