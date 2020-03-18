@@ -44,12 +44,12 @@ bool check(const char *word)
         {
             if (strcmp(copy, p->word) == 0)
             {
-                return true;
+                return false;
             }
             p = p->next;
         }
     }
- return false;
+ return true;
 }
 
 // Hashes word to a number
