@@ -74,9 +74,9 @@ bool load(const char *dictionary)
     {
         return false;
     }
-    char out[LENGTH + 1];
-    int n = LENGTH + 2;
-    while (fgets(out, n, dict) != NULL)
+    char out[LENGTH];
+    //int n = LENGTH + 2;
+    while (fscanf(dict,"%s", out) != EOF)
     {
         int index = hash(out) % N;
         node *tmp = malloc(sizeof(node));
