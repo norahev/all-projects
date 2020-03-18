@@ -86,7 +86,7 @@ bool load(const char *dictionary)
         }
         strcpy (tmp->word, out); //copy dictionary words to hashtable
         tmp->next = table[index];
-        table[index] = tmp; hash index
+        table[index] = tmp; 
         counter++;
     }
     fclose(dict);
