@@ -1,5 +1,6 @@
 from cs50 import get_float
 
+
 def main():
     change = get_change()  # prompts user for correct change
     n = round(change * 100)  # rounds number
@@ -23,11 +24,13 @@ def main():
             n = n - d
     print(i)
 
+
 def get_change():  # function for userprompt
     while True:
         n = get_float("How much change is owed?\n")
         if n > 0.009:
             break
     return n
+
 
 main()
