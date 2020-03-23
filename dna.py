@@ -31,14 +31,14 @@ for key in SEQUENCES:  # counts repetitions
             t -= 1
             continue
         if DNA[i: i + k] == key:
-            while DNA[i - k:i] == DNA[i: i +k]:
+            while DNA[i - k:i] == DNA[i: i + k]:
                 t += 1
                 i += k
         if t > tmax:
             tmax = t
     SEQUENCES[key] += tmax
 
-with open(argv[1], newline = '') as PERSON:  # go through people like a dictionary and compare sequences
+with open(argv[1], newline='') as PERSON:  # go through people like a dictionary and compare sequences
     PERSON_READER = DictReader(PERSON)
     for p in PERSON_READER:
         match = 0
