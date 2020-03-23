@@ -1,4 +1,5 @@
 from cs50 import get_string
+from sys import exit
 
 
 def main():
@@ -32,17 +33,14 @@ def main():
         print("AMEX\n")
     else:
         print("INVALID\n")
-
+    return 0
 
 
 def get_number():  # function for card number
     while True:
         s = get_string("Insert your credit card number: ")  # prompt user for number
-        if len(s) == 13 or len(s) == 16 or len(s) == 15:
+        if len(s) > 0:
             break
-        else:
-            print("INVALID")
-            continue
     return s
 
 
