@@ -1,1 +1,3 @@
-SELECT AVG(rating) FROM ratings WHERE(SELECT year FROM movies WHERE year = 2012)
+SELECT ROUND(AVG(rating), 2) FROM
+ratings JOIN movies ON ratings.movie_id = movies.id
+WHERE year = 2012
