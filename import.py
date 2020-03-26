@@ -1,27 +1,25 @@
 import csv
 from sys import argv, exit
-import sqlite3
+import cs50
+import string
 
-
-if len(argv) != 2:
-    print("Incorrect number of command-line arguments")
+if len(argv) != 2 or argv[1].endswith('.csv') == False:  # error if incorrect command line argument
+    print("Incorrect command-line arguments")
     exit(1)
 
-file = argv[1]
-s_file = "students.db"
-connect = sqlite3.connect(s_file)
-cursor = connect.cursor()
-with open("characters.csv", "r") as characters:
-    reader = csv.DictReader(characters)
-    for row in reader:
-        name = []
-        for part in row["name"].split(" "):
-            name.append(part)
-            name.append(row["house"])
-            name.append(row["birth"])
-            if len(name) == 5:
-                cursor.execute ("INSERT INTO students (first, middle, last, house, birth) VALUES(?, ?, ?, ?, ?)", name[:5])
-            if len(name) == 4:
-                cursor.execute("INSERT INTO students (first, last, house, birth) VALUES(?, ?, ?, ?)", name[:4])
-connect.commit()
-connect.close()
+db = cs50.SQL("sqlite:///students.db")  # open students database
+characters = []  # creating list
+
+
+with open ("characters.csv", "r") as char:  # store csv file in list
+    characters = list(csv.reader(char))
+    characters.pop(0)  # remove all the headings
+    for row in characters:
+        name = row[0].split()  # splitting the names
+        if len(name) == 3:
+            db.execute(f"INSERT INTO students (first, middle, last, house, birth) VALUES ('{name[0]}','{name[1]}', '{name[2]}', '{row[1]}', '{row[2]}')")
+        else:
+            db.execute(f"INSERT INTO students (first, middle, last, house, birth) VALUES ('{name[0]}', , '{name[1]}', '{row[1]}', '{row[2]}')")
+
+
+
