@@ -15,6 +15,6 @@ for i in liststudents:
     if i['middle'] != None:
         middle = " " + i['middle']
     else:
-        middle = None
+        middle = ""
     print(f"{i['first']} {i['middle']} {i['last']}, born in {i['birth']}")
 
