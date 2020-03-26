@@ -14,7 +14,8 @@ middle = ""
 for i in liststudents:
     if i['middle'] != None:
         middle = " " + i['middle']
+        print(f"{i['first']} {i['middle']} {i['last']}, born in {i['birth']}")
     else:
         middle = ""
-    print(f"{i['first']} {i['middle']} {i['last']}, born in {i['birth']}")
+        print(f"{i['first']} {i['last']}, born in {i['birth']}")
 
