@@ -12,7 +12,7 @@ liststudents = db.execute(f"SELECT * FROM students WHERE house = '{argv[1]}' ORD
 
 middle = ""
 for i in liststudents:
-    if i['middle'] != '':
+    if i['middle'] != None:
         middle = " " + i['middle']
     else:
         middle = ""
