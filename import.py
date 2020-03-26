@@ -18,6 +18,6 @@ with open (csvfile, "r") as char:  # store csv file in list
         if len(name) == 3:
             db.execute(f"INSERT INTO students (first, middle, last, house, birth) VALUES ('{name[0]}', '{name[1]}', '{name[2]}', '{row[1]}', '{row[2]}')")
         else:
-            db.execute(f"INSERT INTO students (first, middle, last, house, birth) VALUES ('{name[0]}', 'None' , '{name[1]}', '{row[1]}', '{row[2]}')")
+            db.execute(f"INSERT INTO students (first, middle, last, house, birth) VALUES ('{name[0]}', NULL , '{name[1]}', '{row[1]}', '{row[2]}')")
 
 
