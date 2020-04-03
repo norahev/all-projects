@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:2:1-24:12
+ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:2:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Peti\.gradle\caches\transforms-2\files-2.1\f7fa931c10060cb31b4ececcd856b65d\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Peti\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Peti\.gradle\caches\transforms-2\files-2.1\d5caeb323d2f012734c7fc83bc887a28\recyclerview-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -36,25 +36,25 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\Peti\.gradle\caches\transforms
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Peti\.gradle\caches\transforms-2\files-2.1\54ec9a60a0f20829d9c5323f1ce0908c\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Peti\.gradle\caches\transforms-2\files-2.1\0571339fd4cb74441b19561f6766bb98\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Peti\.gradle\caches\transforms-2\files-2.1\0f91f258f9d0abaa0e56c019df47bd85\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:2:1-24:12
 	package
-		ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:3:5-27
-		INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:3:5-39
+		INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:2:1-24:12
-		INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:2:1-24:12
+		INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:2:1-24:12
-		INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:2:1-24:12
+		INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:5:5-20:19
+ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:5:5-20:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Peti\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Peti\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [com.android.volley:volley:1.1.1] C:\Users\Peti\.gradle\caches\transforms-2\files-2.1\519774dfe74d3e0b81fe24d037079d32\jetified-volley-1.1.1\AndroidManifest.xml:9:5-20
@@ -66,47 +66,47 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Pe
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\Peti\.gradle\caches\transforms-2\files-2.1\1cd7eff88f5e86d0249af2958bf465f0\core-1.1.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:11:9-40
-activity#cs50.pokedex.PokemonActivity
-ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:12:9-62
+		ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:11:9-40
+activity#edu.harvard.cs50.pokedex.PokemonActivity
+ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:12:9-62
 	android:name
-		ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:12:19-50
-activity#cs50.pokedex.MainActivity
-ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:13:9-19:20
+		ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:12:19-50
+activity#edu.harvard.cs50.pokedex.MainActivity
+ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:13:9-19:20
 	android:name
-		ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:13:19-47
+		ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:13:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:14:13-18:29
+ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:14:13-18:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:15:17-69
+ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:15:17-69
 	android:name
-		ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:15:25-66
+		ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:15:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:17:17-77
+ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:17:17-77
 	android:name
-		ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:17:27-74
+		ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:17:27-74
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:21:5-67
+ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:22:5-67
 	android:name
-		ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:21:22-64
+		ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:22:22-64
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:22:5-76
+ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:23:5-76
 	android:name
-		ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml:22:22-73
+		ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml:23:22-73
 uses-sdk
-INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Peti\.gradle\caches\transforms-2\files-2.1\f7fa931c10060cb31b4ececcd856b65d\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Peti\.gradle\caches\transforms-2\files-2.1\f7fa931c10060cb31b4ececcd856b65d\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Peti\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
@@ -171,13 +171,13 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Peti\.gr
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Peti\.gradle\caches\transforms-2\files-2.1\0571339fd4cb74441b19561f6766bb98\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Peti\.gradle\caches\transforms-2\files-2.1\0f91f258f9d0abaa0e56c019df47bd85\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Peti\.gradle\caches\transforms-2\files-2.1\0f91f258f9d0abaa0e56c019df47bd85\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Peti\AndroidStudioProjects\Pokedex\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Peti\Downloads\pokedex\Pokedex\app\src\main\AndroidManifest.xml

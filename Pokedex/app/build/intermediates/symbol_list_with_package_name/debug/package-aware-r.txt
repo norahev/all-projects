@@ -1,4 +1,4 @@
-cs50.pokedex
+edu.harvard.cs50.pokedex
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -685,6 +685,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_search
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -754,6 +755,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_search
 id action_text
 id actions
 id activity_chooser_view_content
@@ -767,6 +769,7 @@ id beginning
 id blocking
 id bottom
 id buttonPanel
+id button_catch
 id center
 id center_horizontal
 id center_vertical
@@ -830,8 +833,11 @@ id parentPanel
 id percent
 id pokedex_row
 id pokedex_row_text_view
+id pokemon_description
 id pokemon_name
 id pokemon_number
+id pokemon_type1
+id pokemon_type2
 id progress_circular
 id progress_horizontal
 id radio
@@ -862,6 +868,7 @@ id spacer
 id split_action_bar
 id spread
 id spread_inside
+id sprite
 id src_atop
 id src_in
 id src_over
@@ -949,6 +956,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu main_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 string abc_action_bar_home_description
