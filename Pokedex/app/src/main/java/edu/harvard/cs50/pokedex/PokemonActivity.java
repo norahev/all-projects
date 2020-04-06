@@ -117,6 +117,30 @@ public class PokemonActivity extends AppCompatActivity {
 
                     JSONObject species = response.getJSONObject("species");
                     urldes = species.getString("url");
+                    JsonObjectRequest descriptionrequest = new JsonObjectRequest(Request.Method.GET, urldes, null, new Response.Listener<JSONObject>() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+                            try {
+                                JSONArray fte = response.getJSONArray("flavor_text_entries");
+                                for (int i = 0; i < fte.length(); i++) {
+                                    JSONObject Lang = (JSONObject) fte.get(i);
+                                    String language = Lang.getJSONObject("language").getString("name");
+                                    if (language.equals("en")) {
+                                        description.setText(Lang.getString("flavor_text"));
+                                    }
+                                }
+
+                            } catch (JSONException e) {
+                                Log.e("cs50", "descriptionfaul", e);
+                            }
+                        }
+                    }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error){
+                            Log.e("cs50", "Pokemondetailserror", error);
+                        }
+                    });
+                    requestQueue.add(descriptionrequest);
 
 
                 } catch (JSONException e) {
@@ -130,31 +154,6 @@ public class PokemonActivity extends AppCompatActivity {
             }
         });
         requestQueue.add(request);
-
-        JsonObjectRequest descriptionrequest = new JsonObjectRequest(Request.Method.GET, urldes, null, new Response.Listener<JSONObject>() {
-            @Override
-            public void onResponse(JSONObject response) {
-                try {
-                    description.setText(response.getString("flavor_text"));
-                    JSONArray fte = response.getJSONArray("flavor_text_entries");
-                    for (int i = 0; i < fte.length(); i ++) {
-                        JSONObject one = (JSONObject) fte.get(i);
-                        String language = one.getJSONObject("language").getString("name");
-                        if (one.equals("1")){
-                            description.setText(one.getString("flavor_text"));
-                        }
-                    }
-                } catch (JSONException e) {
-                    Log.e("cs50", "descriptionfaul", e);
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error){
-                Log.e("cs50", "Pokemondetailserror", error);
-            }
-        });
-        requestQueue.add(descriptionrequest);
 
     }
 
