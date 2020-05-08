@@ -1,0 +1,19 @@
+$colorr: #3e2723;
+div {
+    font-size: 18px;
+    p {
+        color: $colorr;
+    }
+}
+%grid {
+    font-size: 16px;
+    border:1px solid $colorr;
+}
+.col-12 {
+    @extend %grid;
+    background-color: darken($color:  #fffacd, $amount: 20);
+}
+.col-6 {
+    @extend %grid;
+    background-color: darken($color: #fffacd, $amount: 10);
+}
