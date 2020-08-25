@@ -1,0 +1,24 @@
+
+textarea {
+    min-height: 400px;
+}
+.Read {
+  padding:3px 0px 3px 3px;
+  border: 2px solid darkgrey;
+  background-color: grey;
+  margin:3px;
+}
+.NotRead {
+  padding:7px 0px 0px 3px;
+  border: 2px solid darkgrey;
+  background-color: white;
+  margin:3px;
+}
+
+button {
+  margin: 3.5px;
+}
+
+.divider {
+  border-top: 0.5px solid grey;
+}
