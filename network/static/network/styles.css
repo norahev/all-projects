@@ -1,0 +1,17 @@
+.Posts {
+    align-content: center;
+    text-align:center;
+    width: 99%;
+    padding: 4px;
+    border: 2px solid darkgrey;
+    background-color:aliceblue;
+  }
+
+#createButton {
+  background-color: thistle;
+  margin: 0px;
+}
+
+.profie {
+    color: rgb(235, 168, 229)
+}
