@@ -1,0 +1,33 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+
+    <div class="card mx-auto my-4" style="width: 85%;">
+        <div class="card-body p-5">
+            <div class="d-flex justify-content-between">
+                <h1 class="card-title"><strong id="usern">{{ selected_user.username }}</strong></h1>
+                {% if user.is_authenticated %}
+                    {% if user != selected_user %}
+                        <button onclick="javascript:follow({{selected_user.id}})" id="follow_button" class="btn btn-primary" style="width:150px">
+                            {% if user in selected_user.followers.all %}
+                                Unfollow
+                            {% else %}
+                                Follow
+                            {% endif %}
+                        </button>
+                    {% endif %}
+                {% endif %}
+            </div>
+            <br>
+            <hr>
+            <br>
+            <h3><strong id="followers">Followers: &nbsp&nbsp {{ selected_user.followers.all|length }}</strong></h3>
+            <br>
+            <h3><strong id="following">Following: &nbsp&nbsp {{ selected_user.following.all|length }}</strong></h3>
+
+        </div>
+    </div>
+
+
+
+{% endblock %}
